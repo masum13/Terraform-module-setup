@@ -1,6 +1,8 @@
 provider "aws" {
   version = "~> 3.0"
   region  = "ap-south-1"
+  access_key = var.access_key
+  secret_key  = var.secret_key
 }
 
 module "instance" {
@@ -11,3 +13,6 @@ module "instance" {
   name = "practice"
   prefix = "module"
 }
+
+  variable "access_key" {}
+  variable "secret_key" {}
